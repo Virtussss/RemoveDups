@@ -1,12 +1,22 @@
 package gslc1_1;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class RemoveDups1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] arr = {1, 2, 3, 4, 5, 1, 2, 3, 6, 7, 8, 9, 9};
+		Scanner scanner = new Scanner(System.in);
+				
+		System.out.println("Enter size of the array: ");
+		int size = scanner.nextInt();
+		
+		int[] arr = new int[size];
+		System.out.println("Enter the elements of the array: ");
+		for(int i=0; i<size; i++) {
+			arr[i] = scanner.nextInt();
+		}
 		int[] arrWithoutDups = removeDups(arr);
 		System.out.println("Original array: " + Arrays.toString(arr));
 		System.out.println("Array without duplicates: " + Arrays.toString(arrWithoutDups));
